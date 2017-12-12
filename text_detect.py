@@ -42,10 +42,7 @@ cv2.rectangle(gaus, (x, y), (x+w, y+h), (0,0,255), 2)
 # Remove background and return only text area back/ crop image
 text = gaus[y:y+h, x:x+w] # region of intrest. It`s working !!!
 
-# Need to find way to add text to the cropped image.
 # read text
-# stuck here dunno what to do...hellppppp!!!!!!!!
-
 pytesseract.pytesseract.tesseract_cmd = 'C:\\Tesseract-OCR\\tesseract'
 text_output = pytesseract.image_to_string(Image.fromarray(text), config='-psm 6')
 
